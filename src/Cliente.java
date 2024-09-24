@@ -1,4 +1,6 @@
 
+
+
 public class Cliente {
     final int NUMEROCONTA = 1021 ;
     final String AGENCIA = "067-8";
@@ -18,9 +20,29 @@ public class Cliente {
         System.out.println("Número da conta: " + NUMEROCONTA);
         System.out.println("Agência: " + AGENCIA);
         System.out.println("Olá " + Nome + ", obrigado pro criar uma conta em nosso banco, sua agência é " + AGENCIA + ", conta "+ NUMEROCONTA + " e seu saldo R$ "+ saldo+ " já está disponível para saque");
-        
-        
      }
+
+     public void sacar (double valorSolicitado){
+
+        if (saldo < valorSolicitado){
+            System.out.println("Saldo insulficiente");
+            System.out.println("Saldo atual R$ " + saldo);
+        }
+        else if (saldo >= valorSolicitado) {
+            System.out.println("Valor solicitado:" + valorSolicitado);
+            System.out.println("Saque realizado com sucesso");
+            saldo -= valorSolicitado;
+            System.out.println("Saldo atual R$ " + saldo);
+        }
+        else {
+            System.out.println("Informe um valor valido ");
+        }
+
+
+     }
+        
+        
+     
 
 
 }

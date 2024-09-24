@@ -16,8 +16,11 @@ public class ContaTerminal {
     cliente.cadastrarCliente(NomedoClinte, SaldoCliente);
     cliente.cadostroConcluido();
 
+    System.out.println("Qual valor gostaria de sacar");
+    double valorSaque = scanner.nextDouble();
+
+    cliente.sacar(valorSaque);
+
     scanner.close();
        }
-
-
 }
